@@ -3,8 +3,64 @@
 }
 html {
   height: 100%;
+  background-color: #e3ed9d;
 }
-body {
+/* body {
   margin: 0;
   min-height: 100%;
+} */
+/*Flexbox allows developers to create a flexible grid layout, while Grid enables 
+them to develop complex and responsive strategies that are easy to manage and maintain. 
+
+Grid provides a column-based system that can create layouts quickly and easily, while Flexbox 
+offers greater flexibility by allowing elements to be moved around on the page as needed. 
+While both can be used to significant effect, it’s essential to understand how each works to 
+make the most of them.
+
+Flexbox is a one-dimensional system that works with elements placed in a linear order. 
+Items flex to fill additional space and shrink to fit into smaller spaces.
+It is more flexible than Grid, allowing elements to be shifted and moved around on the page 
+as necessary.
+
+Grid is a two-dimensional layout method for laying out items in rows and columns.
+
+The primary difference between them is the dimensionality that they offer. CSS Grid 
+provides two-dimensional layout capabilities, allowing for elements to be arranged 
+horizontally and vertically. On the other hand, CSS Flexbox provides flexibility, 
+allowing for elements to be placed on a single axis, either horizontally or vertically.
+
+*/
+.container {
+  display: grid;
+  /* grid-auto-rows: minmax(15rem, auto); */
+  grid-auto-columns: minmax(15rem, auto);
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(15rem, 1fr)
+  ); /*15 rems *16 = 240px*/
+  /* grid-template-columns: repeat (auto-fill, minmax(15rem, 1fr)); */
+  grid-gap: 1rem;
 }
+.item {
+  background-color: white;
+  border: 3px solid black;
+  color: #a579cc;
+  padding: 2rem;
+  font-size: 2rem;
+  text-align: center;
+}
+
+/* .container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -0.5rem;
+}
+.item {
+  margin: 0.5rem;
+  background-color: #fff;
+  border: 3px solid black;
+  color: #a579cc;
+  padding: 2rem;
+  font-size: 2rem;
+  text-align: center;
+} */
